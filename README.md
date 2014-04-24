@@ -13,6 +13,6 @@ Google の OpenID Connect 認証を行うサンプルです。
 5. Web ブラウザで http://localhost:3000/ を開く。
 6. ログインボタンをクリック。
 7. ログインを承認。
-8. 取得した情報を以下のスクリーンショットのように表示します。
+8. 取得した情報を下のスクリーンショットのように表示します。
 
 ![認証後の画面](http://cache.webos-goodies.jp/cache/farm8.staticflickr.com/7185/13997444194_490d6760f1_o.png)
