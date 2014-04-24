@@ -7,8 +7,9 @@
 
 <%- if @error -%>
 <p><%= @error %></p>
-<%- else -%>
+<%- end -%>
 
+<%- if @result -%>
 <h2>https://accounts.google.com/o/oauth2/token のレスポンス</h2>
 
 <dl>
@@ -17,7 +18,9 @@
   <dd><%= value %></dt>
   <%- end -%>
 </dl>
+<%- end %>
 
+<%- if @payload -%>
 <h2>id_token の中身</h2>
 
 <dl>
@@ -26,7 +29,9 @@
   <dd><%= value %></dt>
   <%- end -%>
 </dl>
+<%- end %>
 
+<%- if @profile -%>
 <h2>https://www.googleapis.com/plus/v1/people/me/openIdConnect のレスポンス</h2>
 
 <dl>
@@ -35,5 +40,4 @@
   <dd><%= value %></dt>
   <%- end -%>
 </dl>
-
-<%- end -%>
+<%- end %>
