@@ -1,0 +1,39 @@
+<style>
+  dl { font-size:14px; }
+  dd { word-wrap:break-word; word-break:break-all; margin-bottom:1em; }
+</style>
+
+<h1>OpenID Connect Sample</h1>
+
+<%- if @error -%>
+<p><%= @error %></p>
+<%- else -%>
+
+<h2>https://accounts.google.com/o/oauth2/token のレスポンス</h2>
+
+<dl>
+  <%- @result.each do |key, value| -%>
+  <dt><%= key %></dt>
+  <dd><%= value %></dt>
+  <%- end -%>
+</dl>
+
+<h2>id_token の中身</h2>
+
+<dl>
+  <%- @payload.each do |key, value| -%>
+  <dt><%= key %></dt>
+  <dd><%= value %></dt>
+  <%- end -%>
+</dl>
+
+<h2>https://www.googleapis.com/plus/v1/people/me/openIdConnect のレスポンス</h2>
+
+<dl>
+  <%- @profile.each do |key, value| -%>
+  <dt><%= key %></dt>
+  <dd><%= value %></dt>
+  <%- end -%>
+</dl>
+
+<%- end -%>
